@@ -1,21 +1,50 @@
+/* intento de normaliar igual hay uno con el normalize fino 10/10*/
 *{
-
-    margin: 0;
-    padding: 0;
-    font-family: 'Rubik', sans-serif;
+margin:0 auto;
+padding:0 auto;
+font-family: 'Rubik', sans-serif;
+box-sizing: border-box;
 }
 
-h1{
 
-
-}
 
 
 
 body{
     background-color: white;
     color: black;
+    
 
+}
+
+/* cambio del logo con hover */
+.brand-logo
+{
+
+position: relative;
+display: inline-block;
+margin-top:0 auto;
+}
+
+.brand-logo .next{
+display: none;
+position: absolute;
+top:0;
+left:0;
+z-index: -1;
+}
+
+.brand-logo:hover{
+    visibility: hidden;
+}
+
+
+
+ .brand-logo:hover .next{
+
+    display: inline;
+    visibility:visible;
+    
 }
 /*dark mode*/
 .dark-mode{
@@ -24,46 +53,88 @@ body{
     color:white;
 }
 
-nav:hover{
 
-    background-color: #1c96ea;
+/*swtich
 
-}
-.lbl{
-    display: inline-block;
-    width: 65px;
-    height:33px;
-    background: #0c456d;
-    border-radius: 100px;
-    cursor: pointer;
+.switch{
+
     position: relative;
-    top:4px;
-    left:4px
-    transition: .5s;
+    dipslay: inline-block;
+    width: 60px;
+    height: 34px;
 }
 
-.lbl::after{
-
-    content: '';
-    display: block;
-    width: 25px;
-    height: 25px;
-    background: #2881bf;
-    border-radius: 100px;
-    position:absolute;
-    top:4px;
-    left 4px;
+.switch input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:  #55aaf9;
+    -webkit-transition: .6s;
+    transition: .6s;
 }
 
-#switch:checked + .lbl::after{
-    left: 36px;
-    transition: .5s;
+.slider:before{
+
+    position: absolute;
+    content: "";
+    height:26px;
+    width:26px;
+    left:4px;
+    bottom:4px;
+    background-color: #fefefe;
+    transition:.6s;
+    -webkit-transition: .6s;
 }
 
-#switch:checked + .lbl{
-    background: #42aef9;
+input:checked + .slider{
+
+    background-color: #c0dee9;
+
 }
 
-#switch {
-    display: none;
+
+input:focus + .slider{
+    background-color: #149acb ;
+}
+
+input:checked + .slider:before{
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+.slide .round{
+    border-radius:34px;
+}
+.slider.round:before{
+    border-radius: 50%;
+}
+
+ */
+/*pie de pagin*/
+
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;;
+    width:100%;
+   
+    
+}
+
+
+/* lineas */
+.divider{
+
+    border-top: 4px solid #0980f0;
+    border-radius: 4px;
+    opacity:.5;
 }
